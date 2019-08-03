@@ -22,10 +22,14 @@
   }
 }
 
-@media screen and (max-width: 75rem) {
+@media screen and (max-width: 750px) {
   .pic {
     transform: scale(0.8);
-
+    
+    &:hover {
+      position: static;
+      transform: translateY(0) scale(0.8);
+    }
     &:active {
       border: 1rem solid black;
       transform: scale(1.5);
