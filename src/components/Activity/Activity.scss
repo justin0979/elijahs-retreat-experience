@@ -1,0 +1,12 @@
+.pictureList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1%;
+  position: relative;
+}
+
+@media screen and (max-width: 95rem) {
+  .pictureList {
+    grid-template-columns: 1fr 1fr;
+  }
+}

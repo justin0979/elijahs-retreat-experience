@@ -1,0 +1,12 @@
+.container {
+  margin: 0 10%;
+  background-color: grey;
+  text-align: center;
+  height: 95vh;
+}
+
+@media screen and (max-width: 75rem) {
+  .container {
+    height: 100vh;
+  }
+}
