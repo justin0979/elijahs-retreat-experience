@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import './App.scss';
 import Activity from './Activity/Activity';
 import Animals from './Animals/Animals';
+import AnimalFeed from './AnimalFeed/AnimalFeed';
 import Header from './Header';
 
 const hi = () => {
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/elijahs-retreat-experience" exact component={hi} />
         <Route path="/elijahs-retreat-experience/activity" exact component={Activity} />
         <Route path="/elijahs-retreat-experience/animals" exact component={Animals} />
+        <Route path="/elijahs-retreat-experience/animalfeed" exact component={AnimalFeed} />
       </BrowserRouter>
     </div>
   );
