@@ -7,8 +7,11 @@ import AnimalFeed from './AnimalFeed/AnimalFeed';
 import Header from './Header';
 import Scroll from './Scroll';
 
+import entryPic from './erePictures/entry.jpg';
+
 const hi = () => {
   return <div><h1>Home Page</h1>
+    <img alt='Entry Sign' src={entryPic} />
     <p>This page is under construction</p>
     <p>The Activity and Animal links do have pictures though.</p></div>;
 };
@@ -19,6 +22,7 @@ const App = () => {
       <BrowserRouter>
         <Header />
         <Scroll>
+          <Route path="/" exact component={hi} />
           <Route path="/elijahs-retreat-experience" exact component={hi} />
           <Route path="/elijahs-retreat-experience/activity" exact component={Activity} />
           <Route path="/elijahs-retreat-experience/animals" exact component={Animals} />
