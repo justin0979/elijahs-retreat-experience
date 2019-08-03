@@ -5,6 +5,7 @@ import Activity from './Activity/Activity';
 import Animals from './Animals/Animals';
 import AnimalFeed from './AnimalFeed/AnimalFeed';
 import Header from './Header';
+import Scroll from './Scroll';
 
 const hi = () => {
   return <div><h1>Home Page</h1>
@@ -17,10 +18,12 @@ const App = () => {
     <div className="container">
       <BrowserRouter>
         <Header />
-        <Route path="/elijahs-retreat-experience" exact component={hi} />
-        <Route path="/elijahs-retreat-experience/activity" exact component={Activity} />
-        <Route path="/elijahs-retreat-experience/animals" exact component={Animals} />
-        <Route path="/elijahs-retreat-experience/animalfeed" exact component={AnimalFeed} />
+        <Scroll>
+          <Route path="/elijahs-retreat-experience" exact component={hi} />
+          <Route path="/elijahs-retreat-experience/activity" exact component={Activity} />
+          <Route path="/elijahs-retreat-experience/animals" exact component={Animals} />
+          <Route path="/elijahs-retreat-experience/animalfeed" exact component={AnimalFeed} />
+        </Scroll>
       </BrowserRouter>
     </div>
   );
