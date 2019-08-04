@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/elijahs-retreat-experience/precache-manifest.3cf63025e9b0997929fa9b3ce29e34eb.js"
+  "/elijahs-retreat-experience/precache-manifest.4b92e9dd80bcbec063b0b67d9d0cce20.js"
 );
 
 self.addEventListener('message', (event) => {
