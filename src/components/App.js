@@ -1,11 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import './App.scss';
-import Activity from './Activity/Activity';
-import Animals from './Animals/Animals';
-import AnimalFeed from './AnimalFeed/AnimalFeed';
 import Header from './Header';
 import Scroll from './Scroll';
+import PictureList from './PictureList/PictureList';
+
+import activityPics from './imageArrays/activityPicsArr';
+import animalPics from './imageArrays/animalPicsArr';
+import animalFeedPics from './imageArrays/animalFeedArr.js';
 
 import entryPic from './erePictures/entry.jpg';
 
@@ -27,12 +29,20 @@ const App = () => {
         <Scroll>
           <Route path="/" exact component={hi} />
           <Route path="/elijahs-retreat-experience" exact component={hi} />
-          <Route path="/elijahs-retreat-experience/activity" exact component={Activity} />
-          <Route path="/elijahs-retreat-experience/animals" exact component={Animals} />
+          <Route
+            path="/elijahs-retreat-experience/activity"
+            exact
+            render={props => <PictureList {...props} pics={activityPics} />}
+          />
+          <Route
+            path="/elijahs-retreat-experience/animals"
+            exact
+            render={props => <PictureList {...props} pics={animalPics} />}
+          />
           <Route
             path="/elijahs-retreat-experience/animalfeed"
             exact
-            component={AnimalFeed}
+            render={props => <PictureList {...props} pics={animalFeedPics} />}
           />
         </Scroll>
       </BrowserRouter>

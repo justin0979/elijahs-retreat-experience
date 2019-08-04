@@ -1,6 +1,3 @@
-import React from 'react';
-import './Activity.scss';
-import Picture from '../Picture';
 import activity1 from './ActivityPics/activity-1.jpg';
 import activity2 from './ActivityPics/activity-2.jpg';
 import activity3 from './ActivityPics/activity-3.jpg';
@@ -13,7 +10,7 @@ import activity9 from './ActivityPics/activity-9.jpg';
 import activity10 from './ActivityPics/activity-10.jpg';
 import activity11 from './ActivityPics/activity-11.jpg';
 
-const pics = [
+export default [
   activity1,
   activity2,
   activity3,
@@ -26,21 +23,3 @@ const pics = [
   activity10,
   activity11
 ];
-
-class Activity extends React.Component {
-  render() {
-    return (
-      <div className="pictureList">
-        {pics.map(pic => {
-          return (
-            <div key={pic}>
-              <Picture image={pic} />
-            </div>
-          );
-        })}
-      </div>
-    );
-  }
-}
-
-export default Activity;
