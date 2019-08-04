@@ -28,7 +28,7 @@
     
     &:hover {
       position: static;
-      transform: translateY(0) scale(1.5);
+      transform: translateY(0) scale(1);
     }
     &:active {
       border: 1rem solid black;
@@ -36,5 +36,11 @@
       opacity: 1;
       position: static;
     }
+  }
+}
+
+@media screen and (max-width: 40rem) {
+  .picture {
+    height: 14rem;
   }
 }
