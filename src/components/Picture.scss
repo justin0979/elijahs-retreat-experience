@@ -42,10 +42,12 @@
 
 @media screen and (max-width: 40rem) {
   .picture {
-    height: 10rem;
+    height: 5rem;
   }
 
   &:hover {
     transform: scale(1);
+    margin: 0;
+    padding: 0;
   }
 }
