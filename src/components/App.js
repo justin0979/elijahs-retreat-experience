@@ -10,10 +10,13 @@ import Scroll from './Scroll';
 import entryPic from './erePictures/entry.jpg';
 
 const hi = () => {
-  return <div><h1>Home Page</h1>
-    <img alt='Entry Sign' src={entryPic} />
-    <p>This page is under construction</p>
-    <p>The Activity and Animal links do have pictures though.</p></div>;
+  return (
+    <div>
+      <h1>Home Page</h1>
+      <img alt="Entry Sign" src={entryPic} />
+      <p>This page is under construction</p>
+    </div>
+  );
 };
 
 const App = () => {
@@ -26,7 +29,11 @@ const App = () => {
           <Route path="/elijahs-retreat-experience" exact component={hi} />
           <Route path="/elijahs-retreat-experience/activity" exact component={Activity} />
           <Route path="/elijahs-retreat-experience/animals" exact component={Animals} />
-          <Route path="/elijahs-retreat-experience/animalfeed" exact component={AnimalFeed} />
+          <Route
+            path="/elijahs-retreat-experience/animalfeed"
+            exact
+            component={AnimalFeed}
+          />
         </Scroll>
       </BrowserRouter>
     </div>
