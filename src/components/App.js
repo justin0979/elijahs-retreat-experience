@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route } from 'react-router-dom';
+import { HashRouter, Route } from 'react-router-dom';
 import './App.scss';
 import Header from './Header';
 import Scroll from './Scroll';
@@ -25,7 +25,7 @@ const hi = () => {
 const App = () => {
   return (
     <div className="container">
-      <Router history={history}>
+      <HashRouter>
         <Header />
         <Scroll>
           <Route path="/" exact component={hi} />
@@ -46,7 +46,7 @@ const App = () => {
             render={props => <PictureList {...props} pics={animalFeedPics} />}
           />
         </Scroll>
-      </Router>
+      </HashRouter>
     </div>
   );
 };
