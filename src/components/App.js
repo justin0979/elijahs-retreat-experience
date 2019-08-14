@@ -1,9 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
 import './App.scss';
 import Header from './Header';
 import Scroll from './Scroll';
 import PictureList from './PictureList/PictureList';
+import history from '../history';
 
 import activityPics from './imageArrays/activityPicsArr';
 import animalPics from './imageArrays/animalPicsArr';
@@ -24,7 +25,7 @@ const hi = () => {
 const App = () => {
   return (
     <div className="container">
-      <BrowserRouter>
+      <Router history={history}>
         <Header />
         <Scroll>
           <Route path="/" exact component={hi} />
@@ -45,7 +46,7 @@ const App = () => {
             render={props => <PictureList {...props} pics={animalFeedPics} />}
           />
         </Scroll>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 };
