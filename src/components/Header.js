@@ -1,17 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import './Header.scss';
+const menuList = [
+  { id: 'ml1', dest: 'activity', text: 'Activity' },
+  { id: 'ml2', dest: '', text: 'Home' },
+  { id: 'ml3', dest: 'animals', text: 'Animals' },
+  { id: 'ml4', dest: 'animalFeed', text: 'Animal Feedings' }
+];
 
 const Header = () => {
-  return (
-    <div className="menu">
-      <Link className='title' to="/elijahs-retreat-experience/activity">Activity</Link>
-      <Link className='title' to="/elijahs-retreat-experience">Home</Link>
-      <Link className='title' to="/elijahs-retreat-experience/animals">Animals</Link>
-      <Link className='title' to="/elijahs-retreat-experience/animalfeed">Animal Feedings</Link>
-    </div>
-  );
+  const renderMenu = list => {
+    return menuList.map(({ id, dest, text }) => {
+      return (
+        <Link
+          key={id}
+          className="title"
+          to={`/elijahs-retreat-experience/${dest}`}
+        >
+          {text}
+        </Link>
+      );
+    });
+  };
+
+  return <div className="menu">{renderMenu(menuList)}</div>;
 };
 
 export default Header;

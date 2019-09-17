@@ -1,6 +1,5 @@
 import React from 'react';
 import { HashRouter, Route } from 'react-router-dom';
-import './App.scss';
 import Header from './Header';
 import Scroll from './Scroll';
 import PictureList from './PictureList/PictureList';
@@ -11,13 +10,14 @@ import animalPics from './imageArrays/animalPicsArr';
 import animalFeedPics from './imageArrays/animalFeedArr.js';
 
 import entryPic from './erePictures/entry.jpg';
+import homepageText from 'sass/data/homepageText';
 
 const hi = () => {
   return (
-    <div>
+    <div className="homepage">
       <h1>Home Page</h1>
-      <img alt="Entry Sign" src={entryPic} />
-      <p>This page is under construction</p>
+      <img className="homepage__img" alt="Entry Sign" src={entryPic} />
+      <p className="homepage__text">{homepageText.intro}</p>
     </div>
   );
 };

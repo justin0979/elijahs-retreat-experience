@@ -1,5 +1,4 @@
 import React from 'react';
-import './PictureList.scss';
 import Picture from '../Picture';
 
 class PictureList extends React.Component {

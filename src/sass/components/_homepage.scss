@@ -1,0 +1,19 @@
+.homepage {
+  color: $color-white;
+  &__img {
+    @include respond(phone) {
+      width: 95%;
+      margin: 0 auto;
+      border-radius: 1rem;
+    }
+  }
+
+  &__text {
+    @include respond(phone) {
+      width: 95%;
+      line-height: 1.35;
+      letter-spacing: 0.1rem;
+      font-weight: 450;
+    }
+  }
+}

@@ -4,11 +4,8 @@
   grid-gap: 1%;
   position: relative;
   top: 0;
-}
 
-@media screen and (max-width: 75rem) {
-  .pictureList {
+  @include respond(phone) {
     grid-template-columns: 1fr;
-    padding: 4% 0;
   }
 }
