@@ -1,0 +1,10 @@
+//style={{overflowY: 'scroll', height: '90vh'}}
+
+.scroll {
+  overflow: auto;
+  height: 88vh;
+
+  @include respond(phone) {
+    height: 90vh;
+  }
+}
