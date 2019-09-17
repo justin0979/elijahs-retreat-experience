@@ -1,0 +1,7 @@
+@mixin respond($baseline) {
+  @if $baseline == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+}
