@@ -1,4 +1,4 @@
 
-  ![Piano Picture](/src/components/imageArrays/ActivityPics/activity-1.jpg)
+  ![Piano Picture](/src/components/erePictures/entry.jpg)
   
 
